@@ -1,0 +1,30 @@
+transitions
+    from 0 symbol a to 1
+    from 1 symbol b to 2
+    from 2 symbol c to 3
+    from 1 symbol a to 3
+        postAdaptiveFunction A ( 2, 3 )
+
+submachines
+    submachine M main
+        state 0 start
+        state 1
+        state 2
+        state 3 accepting
+
+actions
+    adaptiveAction A ( p1, p2 )
+        local ?x, ?y
+        generator g1*, g2*
+        action query ?x b p1
+        action remove ?x b p1
+        action query ?y c p2
+        action remove ?y c p2
+        action remove 1 a 1
+            postAdaptiveFunction A (p1, p2)
+        action add ?x b g1*
+        action add g1* b p1
+        action add ?y c g2*
+        action add g2* c p2
+        action add 1 a 1
+            postAdaptiveFunction A (g1*, g2*)
