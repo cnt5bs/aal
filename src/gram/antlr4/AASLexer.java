@@ -1,4 +1,4 @@
-// Generated from ../gram/antlr4/AAL.g4 by ANTLR 4.5.3
+// Generated from ../gram/antlr4/AAS.g4 by ANTLR 4.5.3
 package gram.antlr4;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
@@ -10,7 +10,7 @@ import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
-public class AALLexer extends Lexer {
+public class AASLexer extends Lexer {
 	static { RuntimeMetaData.checkVersion("4.5.3", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
@@ -78,13 +78,13 @@ public class AALLexer extends Lexer {
 	}
 
 
-	public AALLexer(CharStream input) {
+	public AASLexer(CharStream input) {
 		super(input);
 		_interp = new LexerATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 
 	@Override
-	public String getGrammarFileName() { return "AAL.g4"; }
+	public String getGrammarFileName() { return "AAS.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
