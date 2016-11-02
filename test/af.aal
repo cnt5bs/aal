@@ -1,3 +1,4 @@
+
 transitions
     from 0 symbol a to 1
     from 1 symbol b to 2
