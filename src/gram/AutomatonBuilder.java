@@ -7,13 +7,13 @@ import br.usp.poli.lta.cereda.aa.model.State;
 import br.usp.poli.lta.cereda.aa.model.Submachine;
 import br.usp.poli.lta.cereda.aa.model.Transition;
 import br.usp.poli.lta.cereda.xml2aa.model.ListAction;
-import gram.antlr4.AASBaseListener;
-import gram.antlr4.AASParser;
+import gram.antlr4.AASLBaseListener;
+import gram.antlr4.AASLParser;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-public class AutomatonBuilder extends AASBaseListener {
+public class AutomatonBuilder extends AASLBaseListener {
     
 AutomatonBuilder() {
     super();
@@ -24,7 +24,7 @@ Set<String> states = new HashSet<>(); // mantive, mas acho que n??o precisa...
 
     
 @Override
-public void exitAdaptiveAutomaton(AASParser.AdaptiveAutomatonContext ctx) {
+public void exitAdaptiveAutomaton(AASLParser.AdaptiveAutomatonContext ctx) {
     ListAction.setCounter(states.stream().mapToInt(Integer::parseInt).
         max().getAsInt() + 1);
 }

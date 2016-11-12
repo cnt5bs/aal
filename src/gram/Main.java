@@ -1,8 +1,8 @@
 
 package gram;
 
-import gram.antlr4.AASLexer;
-import gram.antlr4.AASParser;
+import gram.antlr4.AASLLexer;
+import gram.antlr4.AASLParser;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,10 +21,10 @@ private void processar(String espec) {
     try {
         is = new FileInputStream(espec);
         ANTLRInputStream input = new ANTLRInputStream(is);
-        AASLexer lexer = new AASLexer(input);
+        AASLLexer lexer = new AASLLexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
-        AASParser parser = new AASParser(tokens);
-        AASParser.AdaptiveAutomatonContext contexto = parser.adaptiveAutomaton();
+        AASLParser parser = new AASLParser(tokens);
+        AASLParser.AdaptiveAutomatonContext contexto = parser.adaptiveAutomaton();
         ParseTreeWalker analisador = new ParseTreeWalker();
         AutomatonBuilder construtor = new AutomatonBuilder();
         analisador.walk(construtor, contexto);
