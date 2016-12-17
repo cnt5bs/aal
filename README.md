@@ -1,6 +1,6 @@
-# aas
+# DInAton
 
-AAS: grammar for automata adaptive specification (inspired by https://github.com/cereda/xml2aa).
+DInAton: grammar for automata adaptive specification (inspired by https://github.com/cereda/xml2aa).
 
 # Author
 
