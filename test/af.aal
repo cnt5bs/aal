@@ -1,0 +1,11 @@
+
+transitions
+    from 0 symbol a to 1
+    from 1 symbol b to 2
+    from 2 symbol a to 1
+
+submachines
+    submachine M main
+        state 0 start
+        state 1
+        state 2 accepting
